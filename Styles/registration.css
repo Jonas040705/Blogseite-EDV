@@ -1,0 +1,92 @@
+body {
+    /* Hintergrund  */
+    font-family: Roboto, Arial;
+    background-color: #e8f8ff; /* Light blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .container {
+    /* Weißes Feld in der Mitte */
+    text-align: center;
+    background-color: #ffffff; /*white background for the card */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 450px;
+    border-style: solid; /*Schwarzer Rand um den Container */
+    display: flex; /* Flexbox sodass der text neben einander stehen kann */
+    flex-direction: column; /* text kann untereinander stehen */
+    align-items: center; /* Zentriert das Logo horizontal */
+    justify-content: center; /* Zentriert alles vertikal */
+  }
+  h1 {
+    font-size: 30px;
+    margin-bottom: -15px;
+    color: black;
+  }
+  h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: Black;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .logo-background {
+    background-color: #4aaeff; /* Blaues Rechteck */
+    border-radius: 20px; /* Abgerundete Ecken */
+    display: flex;
+    justify-content: center; /* Zentriert alles vertikal */
+    align-items: center; /* Zentriert das Logo horizontal */
+    width: 140px; /* Breite des Rechtecks */
+    height: 70px; /* Höhe des Rechtecks */
+    margin-right: 5px; /* Abstand zwischen B und logs */
+  }
+
+  .logo-letter {
+    font-size: 60px; /* Größe des Buchstabens */
+    font-weight: bold;
+    color: #000; /* Schwarzer Buchstabe */
+  }
+
+  .logo-text {
+    font-size: 60px; /* Schriftgröße von logs */
+    font-weight: bold;
+    color: #000; /* Schwarzer Text */
+  }
+  .button {
+    /* beide buttons */
+    width: 70%;
+    padding: 25px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .login {
+    /*login button */
+    background-color: #000;
+    color: #fff;
+  }
+  .login:hover {
+    background-color: #242323;
+  }
+  .create-account {
+    /*create account button */
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+  }
+  .create-account:hover {
+    /* Effect beim drübergehen mit der Maus */
+    background-color: #f0f0f0;
+  }

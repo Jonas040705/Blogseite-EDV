@@ -1,0 +1,194 @@
+body {
+    /* Hintergrund  */
+    font-family: Roboto, Arial;
+    background-color: #e8f8ff; /* Light blue background */
+    display: flex;/*sorgt dafür, dass Elemente frei plaziert werden können*/
+    justify-content: center;/*Die Elemente innerhalb des Containers werden horizonral zentriert*/
+    align-items: center;/*Die Elemente innerhalb des Containers werden vertikal zentriert*/
+    height: 100vh;
+    margin: 0;
+  }
+  .logo {
+        display: flex; /* Horizontale Anordnung von Logo-Hintergrund und Text */
+        align-items: center; /* Vertikale Zentrierung */
+        position: absolute; /* Um das Logo oben links zu platzieren */
+        top: 30px; /* Abstand vom oberen Rand */
+        left: 20px; /* Abstand vom linken Rand */
+        font-family: Roboto, Arial;/*Schriftart für alles auf der Seite*/
+    }
+    .logo-background {
+        background-color: #4aaeff; /* Blau (angepasst nach deinem Screenshot) */
+        color: #000000; /* Schwarzer Text */
+        border-radius: 20px; /* Runde Form */
+        width: 100px; /* Breite des Kreises */
+        height: 70px; /* Höhe des Kreises */
+        display: flex; /* Zentriert den Buchstaben im Kreis */
+        justify-content: center; /* Horizontale Zentrierung */
+        align-items: center; /* Vertikale Zentrierung */
+        font-size: 60px; /* Größe des Buchstabens */
+        font-weight: bold; /* Fettschrift */
+        margin-right: 3px; /* Abstand zwischen Kreis und Text */
+    }
+    
+    /* Text rechts neben dem Kreis */
+    .logo-text {
+        font-size: 60px; /* Schriftgröße des Textes */
+        color: #000; /* Schwarzer Text */
+        font-weight: bold; /* Fettschrift */
+    }
+.container {
+    /* Weißes Feld in der Mitte */
+    text-align: center;
+    background-color: #ffffff; /*white background for the card */
+    padding: 20px;/*mehr Platz innerhalb des Containers*/
+    border-radius: 10px;/*Ecken den containers werden rund*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);/*leichter Schatten um den Container*/
+    width: 400px;
+    height: 450px;
+    border-style: solid; /*Schwarzer Rand um den Container */
+    display: flex; /* Flexbox sodass der text neben einander stehen kann */
+    flex-direction: column; /* text kann untereinander stehen */
+    position: relative; /*container für positon absolute*/
+  }
+  .header {
+    margin-top: 60px;/*Abstand zum oberen Rand des Containers*/
+  }
+  .arrow-back {/*Css für den Pfeil oben linkts im Container*/
+    width: 25px;/*Größe des Pfeils*/
+    filter: invert(1) brightness(0);/*macht den Pfeil schwarz, da er ein png ist und diese Datei immer weiß ist*/
+    position: absolute; /* position absolute orientiert sich immer an einem position relative*/
+    left: 10px;/*Abstand zum linken rand*/
+    top: 10px;/*Abstand zum oberen Rand*/
+  }
+  form  {/*Css für die Beiden Bereich(Email und passwort eingeben)*/
+    background: #fff;/*Backround frage der divs*/
+    padding: 20px;/*Größe*/
+    border-radius: 10px;/*Runde Ecken*/
+    width: 90%;/*Füllen in der horonzontale 90% aus*/
+    height: 15%;/*Höhr*/
+    text-align: left; /* Links ausrichten */
+}
+.email-container {
+    margin-bottom: 30px;/*Abstand zum password container nach unten*/
+}
+.email-container label { /* label ist die Schrift über dem Eingabefeld */
+    display: block;/*sorgt dafür, dass kein anderes Element in der gleichen Zeile stehen kann*/
+    font-size: 14px;/*Größe der Schrift*/
+    color: #333;/*Farbe der Schift*/
+    margin-bottom: 3px;/*Abstand zum Feld der Email Eingabe*/
+}
+.email-container input { /* input ist das Eingabefeld */
+    width: 100%;/*Breite horozontal*/
+    padding: 12px;/*Größe*/
+    font-size: 14px;/*Schriftgröße des Platzhalter*/
+    border: 1px solid #9c9a9a;/*Farbe und dicke des Rands*/
+    border-radius: 5px;/*Ecken werden rund*/
+    box-sizing: border-box;/*macht es zur Box und nicht größer*/
+    background-color: #f2f0f0;/*Color in dem Eingabefeld*/
+}
+.password-container label {/*Schrift über dem Password Eingabefeld*/
+    display: block;/*nimmt die ganze Zeile ein*/
+    font-size: 14px;/*Schriftgröße*/
+    color: #333;/*Schriftfarbe*/
+    margin-bottom: 3px;/*Abstand nach unten zum password Eingabefeld*/
+}
+.password-container input {/*password Eingabefeld*/
+    width: 100%;/*horiontontale Breite*/
+    padding: 12px;/*Größe*/
+    font-size: 14px;/*Schriftgröße*/
+    border: 1px solid #9c9a9a;/*Rand Farbe und dicke*/
+    border-radius: 5px;/*Runde Ecken*/
+    box-sizing: border-box;/*macht es zur Box und nicht größer*/
+    background-color: #f2f0f0;/*Color in dem Eingabefeld*/
+}
+.input-wrapper {/*password Eingabefeld*/
+    position: relative;/*Ein Element mit position: relative wird oft als Referenzpunkt für Kinder-Elemente mit position: absolute verwendet.*/
+    width: 100%;/*Größe*/
+}
+.input-wrapper input {
+    width: 100%;/*Größe*/
+    padding: 12px 40px 10px 10px; /* Platz für das Icon rechts */
+    font-size: 14px;/*Schriftgröße des Platzhalters */
+    border: 1px solid #9c9a9a;/*Farbe und dicke des Rands um das Password Eingabefeld*/
+    border-radius: 5px;/*Ecken werden rund*/
+    box-sizing: border-box;/*bleibt eine box und wird nicht größer*/
+}
+.input-wrapper .toggle-password { /* input-wrapper hat password container überschrieben, input im div von input wrapper ist */
+    position: absolute;/*Plaziert das Icon in eine Ecke*/
+    top: 50%;
+    right: 10px; /* Abstand vom rechten Rand */
+    transform: translateY(-50%);/*dreht das icon um seine eigene Achse*/
+    width: 20px;
+    height: 20px;
+    cursor: pointer;/*Maus wird zur Hand beim drüber gehen*/
+    opacity: 0.5; /* Optionale Transparenz */
+    filter: invert(1) brightness(0);/*icon wird schwarz*/
+}
+.input-wrapper .toggle-password:hover {
+    opacity: 1; /* Volle Deckkraft beim Hover */
+}
+.password-container .forgot-password { /* Forgot password text*/
+    margin-top: 8px;/*Abstand zum Eingabefeld*/
+    font-size: 13px;/*Schriftgröße*/
+    color: #000000;/*Schriftfarbe*/
+    text-decoration: none;/*nicht unterstrichen*/
+    text-align: right;/*Text wird rechts plaziert*/
+    margin-left: 255px;
+}
+.password-container .forgot-password:hover { /* unterstrichen wenn man mit der maus darüber geht*/
+    text-decoration: underline;/*wird unterstrichen wenn man mit der Maus drüber geht*/
+}
+.login-button { 
+    display: flex;/* macht es flexibel sachen innerhalb des Buttons zu plazieren*/
+    justify-content: center;/* alle items werden horitontal zentriert innerhalb des buttons*/
+    align-items: center;/* alle items werden vertikal zentriert innerhalb des buttons*/
+    margin-top: 40px;/*Abstand nach oben*/
+}
+button { /*button in dem log in und der Pfeil sich befinden*/
+    display: flex;/*macht es flexibel sachen innerhalb des Buttons zu plazieren*/
+    align-items: center;/*vertikal center*/
+    justify-content: center;/*horizontal center*/
+    background-color: #000000;/*Hintergrundfarbe des Buttons*/
+    color: #fff;/*Textfarbe*/
+    font-size: 16px;/*Schriftgröße*/
+    font-weight: bold;/*Schrift ist fett*/
+    padding: 13px 20px;/*mehr platz im button*/
+    border: none;/*Kein rand*/
+    border-radius: 10px;/*Runde Ecken*/
+    cursor: pointer;/*maus wird zur Hand beim drübergehen*/
+    width: 100%;/*Breite des Buttons horozontal*/
+    text-align: center;/*Text ist zentriert im Button*/
+}
+.arrow {
+    margin-left: 10px; /*Abstand zwischen text und Pfeil innerhalb des buttons*/
+}
+.icon img { /*Pfeil bearbeiten*/
+    width: 18px;
+    height: 18px;
+    filter: invert(1);/* macht das icon weiß*/ 
+    font-weight: bold;
+}
+button:hover {
+    background-color: #2b2a2a;/*Farbenänderung beim drübergehen mit der Maus*/
+}
+.new-acc { /*beide texte ganz unten*/
+    display: flex; /* Elemente nebeneinander anordnen */
+    justify-content: center; /* Zentriert den gesamten Inhalt horizontal */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+    margin-top: 20px; /* Abstand zum oberen Inhalt */
+    font-size: 14px; /* Standard-Schriftgröße */
+}
+.already-an-account { /*linker Text*/
+    margin-right: 5px; /* Abstand zum link*/
+    font-size: 15px;/*Größe des Textes*/
+    color: #444444;/*Schriftfarbe*/
+}
+.create-account { /*rechter Text*/
+    font-weight: bold; /* Fettschrift für den Link */
+    color: #000; /* Schwarzer Text */
+    text-decoration: none; /* Unterstreichung entfernen */
+    cursor: pointer;/*Maus wird zur Hand beim drübergehen*/
+}
+.create-account:hover {
+    text-decoration: underline; /* Unterstreichung beim Hover */
+}

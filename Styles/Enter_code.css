@@ -1,0 +1,121 @@
+body {
+    /* Hintergrund  */
+    font-family: Roboto, Arial;
+    background-color: #e8f8ff; /* Light blue background */
+    display: flex; /*sorgt dafür, dass Elemente frei plaziert werden können*/
+    justify-content: center; /*Die Elemente innerhalb des Containers werden horizonral zentriert*/
+    align-items: center; /*Die Elemente innerhalb des Containers werden vertikal zentriert*/
+    height: 100vh;
+    margin: 0;
+  }
+  .logo {
+    display: flex; /* Horizontale Anordnung von Logo-Hintergrund und Text */
+    align-items: center; /* Vertikale Zentrierung */
+    position: absolute; /* Um das Logo oben links zu platzieren */
+    top: 30px; /* Abstand vom oberen Rand */
+    left: 20px; /* Abstand vom linken Rand */
+    font-family: Roboto, Arial; /*Schriftart für alles auf der Seite*/
+  }
+  .logo-background {
+    background-color: #4aaeff; /* Blau (angepasst nach deinem Screenshot) */
+    color: #000000; /* Schwarzer Text */
+    border-radius: 20px; /* Runde Form */
+    width: 100px; /* Breite des Kreises */
+    height: 70px; /* Höhe des Kreises */
+    display: flex; /* Zentriert den Buchstaben im Kreis */
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center; /* Vertikale Zentrierung */
+    font-size: 60px; /* Größe des Buchstabens */
+    font-weight: bold; /* Fettschrift */
+    margin-right: 3px; /* Abstand zwischen Kreis und Text */
+  }
+
+  /* Text rechts neben dem Kreis */
+  .logo-text {
+    font-size: 60px; /* Schriftgröße des Textes */
+    color: #000; /* Schwarzer Text */
+    font-weight: bold; /* Fettschrift */
+  }
+  .container {
+    /* Weißes Feld in der Mitte */
+    text-align: center;
+    background-color: #ffffff; /*white background for the card */
+    padding: 20px; /*mehr Platz innerhalb des Containers*/
+    border-radius: 10px; /*Ecken den containers werden rund*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /*leichter Schatten um den Container*/
+    width: 400px;
+    height: 450px;
+    border-style: solid; /*Schwarzer Rand um den Container */
+    display: flex; /* Flexbox sodass der text neben einander stehen kann */
+    flex-direction: column; /* text kann untereinander stehen */
+    position: relative; /*container für positon absolute*/
+  }
+  .header {
+    margin-top: 60px; /*Abstand zum oberen Rand des Containers*/
+  }
+  .email_text {
+    margin-top: -17px;
+    font-size: 15px;
+    color: black;
+  }
+  .email-highlight {
+    color: rgb(34, 134, 167);
+    font-weight: bold;
+  }
+  .arrow-back {
+    /*Css für den Pfeil oben linkts im Container*/
+    width: 25px; /*Größe des Pfeils*/
+    filter: invert(1) brightness(0); /*macht den Pfeil schwarz, da er ein png ist und diese Datei immer weiß ist*/
+    position: absolute; /* position absolute orientiert sich immer an einem position relative*/
+    left: 10px; /*Abstand zum linken rand*/
+    top: 10px; /*Abstand zum oberen Rand*/
+  }
+  .code-input-container {
+    display: flex; /* Macht eine horizontale Anordnung */
+    justify-content: center; /* Zentriert die Elemente horizontal */
+    gap: 20px; /* Abstand zwischen den Eingabefeldern */
+    margin: 20px 0; /* Abstand um die Gruppe */
+    margin-top: 40px;
+  }
+
+  .code-input {
+    width: 50px; /* Breite eines Eingabefelds */
+    height: 60px; /* Höhe eines Eingabefelds */
+    border: 2px solid #000; /* Schwarzer Rand */
+    border-radius: 10px; /* Abgerundete Ecken */
+    text-align: center; /* Zentrierter Text */
+    font-size: 18px; /* Größe der eingegebenen Ziffern */
+    font-weight: bold; /* Fettgedruckt */
+    outline: none; /* Kein Fokus-Rand */
+    background-color: #f9f9f9; /* Hintergrundfarbe */
+  }
+
+  .code-input:focus {
+    border-color: #007bff; /* Blaue Farbe beim Fokussieren */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Leichte Leuchteffekt */
+  }
+  .confirm-button {
+    display: flex; /* macht es flexibel sachen innerhalb des Buttons zu plazieren*/
+    justify-content: center; /* alle items werden horitontal zentriert innerhalb des buttons*/
+    align-items: center; /* alle items werden vertikal zentriert innerhalb des buttons*/
+    margin-top: 70px; /*Abstand nach oben*/
+  }
+  button {
+    /*button in dem log in und der Pfeil sich befinden*/
+    display: flex; /*macht es flexibel sachen innerhalb des Buttons zu plazieren*/
+    align-items: center; /*vertikal center*/
+    justify-content: center; /*horizontal center*/
+    background-color: #000000; /*Hintergrundfarbe des Buttons*/
+    color: #fff; /*Textfarbe*/
+    font-size: 16px; /*Schriftgröße*/
+    font-weight: bold; /*Schrift ist fett*/
+    padding: 13px 20px; /*mehr platz im button*/
+    border: none; /*Kein rand*/
+    border-radius: 10px; /*Runde Ecken*/
+    cursor: pointer; /*maus wird zur Hand beim drübergehen*/
+    width: 100%; /*Breite des Buttons horozontal*/
+    text-align: center; /*Text ist zentriert im Button*/
+  }
+  button:hover {
+    background-color: #2b2a2a; /*Farbenänderung beim drübergehen mit der Maus*/
+  }

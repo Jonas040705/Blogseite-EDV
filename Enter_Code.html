@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enter Code</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Link für die Schriftart Roboto-->
+    <link rel="stylesheet" href="Styles/Enter_code.css" />
+    <!--Link zur Style Datei-->
+  </head>
+  <body>
+    <div class="logo">
+      <div class="logo-background">
+        <span class="logo-letter">Blo</span>
+      </div>
+      <span class="logo-text">gs</span>
+    </div>
+    <div class="container">
+      <!--Weißes Rechteck, indem alles steht-->
+      <a href="forgotpassword.html"
+        ><img
+          class="arrow-back"
+          src="icons/arrow_back_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png"
+        /> </a
+      ><!--Pfeil oben Links im Container, welcher auf die Anfangsseite verlinkt-->
+      <h1 class="header">Enter Code</h1>
+      <!--Überschrift-->
+      <div class="email_text">
+        We have send the code to
+        <span class="email-highlight" id="emailDisplay"></span>
+      </div>
+      <div class="code-input-container">
+        <input type="text" maxlength="1" class="code-input" />
+        <input type="text" maxlength="1" class="code-input" />
+        <input type="text" maxlength="1" class="code-input" />
+        <input type="text" maxlength="1" class="code-input" />
+        <input type="text" maxlength="1" class="code-input" />
+      </div>
+      <form action="new_password.html" method="get">
+        <!--Sendet mich zu der verlinkten Seite-->
+        <div class="confirm-button">
+          <!--login button der Text und den Pfeil enthält-->
+          <button type="submit" disabled>
+            <!--Nur der Text-->
+            confirm code
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="JavaScript/Enter_code.js"></script>
+  </body>
+</html>

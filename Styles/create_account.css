@@ -1,0 +1,209 @@
+body {
+    /* Hintergrund  */
+    font-family: Roboto, Arial;
+    background-color: #e8f8ff; /* Light blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .logo {
+    display: flex; /* Horizontale Anordnung von Logo-Hintergrund und Text */
+    align-items: center; /* Vertikale Zentrierung */
+    position: absolute; /* Um das Logo oben links zu platzieren */
+    top: 30px; /* Abstand vom oberen Rand */
+    left: 20px; /* Abstand vom linken Rand */
+    font-family: Roboto, Arial;
+  }
+  .logo-background {
+    background-color: #4aaeff; /* Blau (angepasst nach deinem Screenshot) */
+    color: #000000; /* Schwarzer Text */
+    border-radius: 20px; /* Runde Form */
+    width: 100px; /* Breite des Kreises */
+    height: 70px; /* Höhe des Kreises */
+    display: flex; /* Zentriert den Buchstaben im Kreis */
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center; /* Vertikale Zentrierung */
+    font-size: 60px; /* Größe des Buchstabens */
+    font-weight: bold; /* Fettschrift */
+    margin-right: 3px; /* Abstand zwischen Kreis und Text */
+  }
+  /* Text rechts neben dem Kreis */
+  .logo-text {
+    font-size: 60px; /* Schriftgröße des Textes */
+    color: #000; /* Schwarzer Text */
+    font-weight: bold; /* Fettschrift */
+  }
+  .container {
+    /* Weißes Feld in der Mitte */
+    text-align: center;
+    background-color: #ffffff; /*white background for the card */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 450px;
+    border-style: solid; /*Schwarzer Rand um den Container */
+    display: flex; /* Flexbox sodass der text neben einander stehen kann */
+    flex-direction: column; /* text kann untereinander stehen */
+    position: relative; /*container für positon absolute*/
+  }
+  .arrow-back {
+    width: 25px;
+    filter: invert(1) brightness(0);
+    position: absolute; /* position absolute orientiert sich immer an einem position relative*/
+    left: 10px;
+    top: 10px;
+  }
+  .header {
+    margin-top: 20px;
+  }
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    height: 15%;
+    text-align: left; /* Links ausrichten */
+  }
+  .email-container {
+    margin-bottom: 35px;
+  }
+  .email-container label {
+    /* label ist die Schrift über dem Eingabefeld */
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 3px;
+    text-align: left;
+  }
+  .email-container input {
+    /* input ist das Eingabefeld */
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #9c9a9a;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #f2f0f0;
+    margin-bottom: 2px;
+  }
+  .password-container {
+    margin-bottom: 20px;
+  }
+  .password-container label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 3px;
+    text-align: left;
+  }
+  .password-container input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #9c9a9a;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #f2f0f0;
+  }
+  .input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  .input-wrapper input {
+    width: 100%;
+    padding: 12px 40px 10px 10px; /* Platz für das Icon rechts */
+    font-size: 14px;
+    border: 1px solid #9c9a9a;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  .input-wrapper .toggle-password {
+    /* input-wrapper hat password container überschrieben, input im div von input wrapper ist */
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Abstand vom rechten Rand */
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.5; /* Optionale Transparenz */
+    filter: invert(1) brightness(0);
+  }
+  .input-wrapper .toggle-password:hover {
+    opacity: 1; /* Volle Deckkraft beim Hover */
+  }
+  .password-checker {
+    align-items: left;
+    display: flex;
+    margin-top: -15px;
+    position: relative;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .icon img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+  }
+  .password-conditions {
+    position: absolute;
+    margin-left: 24px;
+    font-size: 15px;
+    align-items: center;
+    margin-top: -2px;
+  }
+  .login-button {
+    display: flex; /* macht es flexibel sachen innerhalb des Buttons zu plazieren*/
+    justify-content: center; /* alle items werden horitontal zentriert innerhalb des buttons*/
+    align-items: center; /* alle items werden vertikal zentriert innerhalb des buttons*/
+    margin-top: -10px;
+  }
+  button {
+    /*button in dem log in und der Pfeil sich befinden*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+  }
+  .arrow {
+    margin-left: 10px; /*Abstand zwischen text und Pfeil innerhalb des buttons*/
+  }
+  button:hover {
+    background-color: #2b2a2a;
+  }
+  .new-acc {
+    /*beide texte ganz unten*/
+    display: flex; /* Elemente nebeneinander anordnen */
+    justify-content: center; /* Zentriert den gesamten Inhalt horizontal */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+    margin-top: -5px; /* Abstand zum oberen Inhalt */
+    font-size: 14px; /* Standard-Schriftgröße */
+  }
+  .already-an-account {
+    /*linker Text*/
+    margin-right: 5px; /* Abstand zum link*/
+    font-size: 15px;
+    color: #444444;
+  }
+  .create-account {
+    /*rechter Text*/
+    font-weight: bold; /* Fettschrift für den Link */
+    color: #000; /* Schwarzer Text */
+    text-decoration: none; /* Unterstreichung entfernen */
+    cursor: pointer;
+  }
+  .create-account:hover {
+    text-decoration: underline; /* Unterstreichung beim Hover */
+  }

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Styles/create_account.css" />
+    <!--Verlinkung zum Css Code-->
+  </head>
+  <body>
+    <div class="logo">
+      <div class="logo-background">
+        <span class="logo-letter">Blo</span>
+      </div>
+      <span class="logo-text">gs</span>
+    </div>
+    <div class="container">
+      <!--Weißes Rechteck indem alles steht-->
+      <a href="registration.html"
+        ><img
+          class="arrow-back"
+          src="icons/arrow_back_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png"
+        /><!--Pfeil oben linkts im container, welcher auf die Anfangsseite verlinkt-->
+      </a>
+      <h1 class="header">Create Account</h1>
+      <!--Überschrift-->
+      <div class="email-container">
+        <!--E-mail Bereich-->
+        <label for="emailInput">E-Mail Address</label
+        ><!--Text über dem Eingabefeld der E-Mail-->
+        <input
+          type="email"
+          id="emailInput"
+          placeholder="example@gmail.com"
+          required
+        /><!--Eingabefeld der Email-->
+      </div>
+      <div class="password-container">
+        <!--Passwordbereich zum Password festlegen-->
+        <label for="newPassword">Create a password</label
+        ><!--Text über dem Feld indem man sein Password festlegt-->
+        <div class="input-wrapper">
+          <!--Eingabefeld zum Password festlegen-->
+          <input
+            type="password"
+            id="newPassword"
+            placeholder="password*"
+            oninput="validatePassword('newPassword', 'circleIcon')"
+            required
+          />
+
+          <img
+            class="toggle-password"
+            src="icons/visibility_off_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png"
+            alt="Toggle Password"
+            onclick="togglePassword('newPassword', this)"
+          />
+        </div>
+      </div>
+      <div class="password-checker">
+        <!--div der den leeren Kreis und 8 characters fast-->
+        <span class="icon"
+          ><!--leerer Kreis(Icon), der sich dynamisch ändert-->
+          <img
+            id="circleIcon"
+            src="icons/radio_button_unchecked_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png"
+            alt="icon"
+          />
+        </span>
+        <div class="password-conditions">8 characters</div>
+        <!--Test hinter dem icon-->
+      </div>
+      <div class="password-container">
+        <!--Password wiederholen Bereich-->
+        <label for="confirmPassword">Confirm password</label
+        ><!--Text über dem Feld, indem man sein PW wiederholt-->
+        <div class="input-wrapper">
+          <!--Password wiederholen Eingabefeld-->
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="repeat password"
+            oninput="validatePassword('confirmPassword',)"
+            required
+          />
+          <img
+            class="toggle-password"
+            src="icons/visibility_off_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png"
+            alt="Toggle Password"
+            onclick="togglePassword('confirmPassword', this)"
+          />
+        </div>
+      </div>
+      <form action="login.html" method="get">
+        <div class="login-button">
+          <!--div der das Pfeil Icon + den Text create Avvount in dem Button fast-->
+          <button id="createAccountButton" type="submit">
+            <!--Button mit icon und text-->
+            Create Account
+            <div class="arrow">
+              <!--Icon-->
+              <span class="icon">
+                <img src="icons/right.png" alt="icon" />
+              </span>
+            </div>
+          </button>
+        </div>
+      </form>
+      <div class="new-acc">
+        <!--Schrift unter dem Create Account Button-->
+        <span class="already-an-account">Already have an account?</span
+        ><!--Text ohne link-->
+        <a href="login.html" class="create-account">Log in</a
+        ><!--Text mit Link der auf die login verlinkt-->
+      </div>
+    </div>
+    <script src="JavaScript/create_account.js"></script>
+  </body>
+</html>
