@@ -43,7 +43,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 400px;
-    height: 450px;
+    height: 530px;
     border-style: solid; /*Schwarzer Rand um den Container */
     display: flex; /* Flexbox sodass der text neben einander stehen kann */
     flex-direction: column; /* text kann untereinander stehen */
@@ -68,7 +68,7 @@ body {
     text-align: left; /* Links ausrichten */
   }
   .email-container {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
   .email-container label {
     /* label ist die Schrift über dem Eingabefeld */
@@ -88,6 +88,28 @@ body {
     box-sizing: border-box;
     background-color: #f2f0f0;
     margin-bottom: 2px;
+  }
+  .username-container {
+    margin-bottom: 20px;
+  }
+  .username-container label {
+    /* label ist die Schrift über dem Eingabefeld */
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 3px;
+    text-align: left;
+  }
+  .username-container input {
+      /* input ist das Eingabefeld */
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+      border: 1px solid #9c9a9a;
+      border-radius: 5px;
+      box-sizing: border-box;
+      background-color: #f2f0f0;
+      margin-bottom: 2px;
   }
   .password-container {
     margin-bottom: 20px;
@@ -176,6 +198,7 @@ body {
     cursor: pointer;
     width: 100%;
     text-align: center;
+    margin-top: -5px;
   }
   .arrow {
     margin-left: 10px; /*Abstand zwischen text und Pfeil innerhalb des buttons*/

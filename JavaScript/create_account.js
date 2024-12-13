@@ -47,6 +47,7 @@ function validatePassword(inputId, circleId) {
           const confirmPassword = document
             .getElementById("confirmPassword")
             .value.trim();
+          const username = document.getElementById("usernameInput").value.trim();
 
           // E-Mail-Validierung mit Regex
           const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Einfache E-Mail-Validierung
@@ -71,6 +72,12 @@ function validatePassword(inputId, circleId) {
           if (password.length < 8) {
             alert("Das Passwort muss mindestens 8 Zeichen lang sein!"); // Warnmeldung ausgeben
             return; // Weiterleitung verhindern
+          }
+
+          // Optional: Überprüfen, ob der Benutzername bestimmte Kriterien erfüllt
+          if (username.length < 3) {
+            alert("Der Benutzername muss mindestens 3 Zeichen lang sein!");
+            return; // Warnmeldung ausgeben
           }
 
           // Formular absenden, wenn alle Bedingungen erfüllt sind
