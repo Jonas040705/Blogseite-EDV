@@ -1,0 +1,29 @@
+.title-homepage {
+  grid-row: 2; /* Position unterhalb des Headers */
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  max-height: 590px;
+  gap: 190px; /* Abstand zwischen Text und Icon */
+  background-color: #f6f7ff; /* Hintergrundfarbe */
+  color: #000; /* Textfarbe */
+}
+.text-container {
+  align-items: center;
+  margin-left: 60px;
+}
+.text-container h1 {
+  font-size: 80px; /* Größe der Überschrift */
+  margin-bottom: 50px; /* Abstand nach unten zum Technologie Text */
+  text-align: center;
+}
+.text-container p {
+  font-size: 20px; /* Größe der Beschreibung */
+  line-height: 1.5; /* Zeilenhöhe für Lesbarkeit */
+  margin: 0; /* Keine zusätzlichen Abstände */
+  text-align: center;
+}
+.icon-container img {
+  width: 550px;
+  height: auto;
+}
