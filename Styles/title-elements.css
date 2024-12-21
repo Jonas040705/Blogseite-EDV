@@ -3,10 +3,11 @@
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  max-height: 590px;
-  gap: 190px; /* Abstand zwischen Text und Icon */
+  max-height: 250px;
+  gap: 180px; /* Abstand zwischen Text und Icon */
   background-color: #f6f7ff; /* Hintergrundfarbe */
   color: #000; /* Textfarbe */
+  margin-top: 55px;
 }
 .text-container {
   align-items: center;
@@ -26,4 +27,36 @@
 .icon-container img {
   width: 550px;
   height: auto;
+}
+.line {
+  grid-column: 1 / -1; /* Linie nimmt beide Spalten ein */
+  height: 3px;
+  background-color: black;
+  margin-top: -350px;
+}
+.grid-3 {
+  grid-row: 3;
+  display: grid;
+  max-height: 30px;
+  grid-template-rows: auto auto; /* Eine Zeile für jeden Inhalt */
+  row-gap: 5px; /* Abstand zwischen den Zeilen */
+  margin-top: 260px;
+  font-size: 40px;
+  text-align: left;
+  margin-left: 40px;
+}
+.blog-button {
+  background-color: #b3a7f2; /* Hintergrundfarbe */
+  color: white; /* Textfarbe */
+  padding: 20px 10px; /* Innenabstand */
+  border: none; /* Keine Rahmen */
+  border-radius: 50px; /* Abgerundete Ecken */
+  font-size: 16px; /* Schriftgröße */
+  cursor: pointer; /* Zeiger bei Hover */
+  text-decoration: none; /* Kein Unterstrich */
+  font-size: 30px;
+  font-weight: bold;
+  max-width: 1100px;
+  margin-left: 150px;
+  word-spacing: 3px;
 }
