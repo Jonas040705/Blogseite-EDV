@@ -1,0 +1,44 @@
+/* Container für die gesamte Kategorienzeile */
+h3 {
+  margin-top: 290px;
+  font-size: 30px;
+  margin-left: 30px;
+}
+h4 {
+  margin-top: 5px;
+  font-size: 20px;
+  margin-left: 30px;
+}
+.grid-4 {
+  grid-row: 4;
+  display: flex; /* Flexbox für einfache horizontale Ausrichtung */
+  align-items: center; /* Zentriert Inhalte vertikal */
+  width: 70%; /* Nimmt die gesamte Breite ein */
+  padding: 5px; /* Abstand um die Zeile */
+  margin-top: -25px; 
+  margin-left: 25px;
+}
+/* Styling für das Dropdown-Menü */
+.header-categorie #category-select {
+  padding: 15px; /* Innenabstand für besseren Klickkomfort */
+  padding-left: 1170px;
+  font-size: 1em; /* Angemessene Schriftgröße */
+  border: 1px solid #000000; /* Dünner Rand */
+  border-radius: 5px; /* Runde Ecken */
+  background-color: #fff; /* Weißer Hintergrund */
+  color: #333; /* Textfarbe */
+  cursor: pointer; /* Zeigt einen Zeiger bei Hover an */
+  transition: all 0.3s ease; /* Sanfte Übergänge bei Interaktion */
+}
+
+/* Hover-Effekt für das Dropdown */
+.header-categorie #category-select:hover {
+  border-color: #888; /* Dunklerer Rand bei Hover */
+}
+
+/* Dropdown-Optionen Styling (Browser-Standard wird genutzt) */
+.header-categorie #category-select option {
+  padding: 10px; /* Abstand für Optionen */
+  font-size: 1em;
+}
+

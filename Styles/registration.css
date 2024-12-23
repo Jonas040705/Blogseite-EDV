@@ -8,7 +8,7 @@ body {
     height: 100vh;
     margin: 0;
   }
-  .container {
+.container {
     /* Weißes Feld in der Mitte */
     text-align: center;
     background-color: #ffffff; /*white background for the card */
@@ -22,6 +22,7 @@ body {
     flex-direction: column; /* text kann untereinander stehen */
     align-items: center; /* Zentriert das Logo horizontal */
     justify-content: center; /* Zentriert alles vertikal */
+    position: relative;
   }
   h1 {
     font-size: 30px;
@@ -32,6 +33,13 @@ body {
     font-size: 30px;
     margin-bottom: 50px;
     color: Black;
+  }
+  .arrow-back {/*Css für den Pfeil oben linkts im Container*/
+    width: 25px;/*Größe des Pfeils*/
+    filter: invert(1) brightness(0);/*macht den Pfeil schwarz, da er ein png ist und diese Datei immer weiß ist*/
+    position: absolute; /* position absolute orientiert sich immer an einem position relative*/
+    left: 10px;/*Abstand zum linken rand*/
+    top: 10px;/*Abstand zum oberen Rand*/
   }
   .logo {
     display: flex;

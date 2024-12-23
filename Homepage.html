@@ -8,6 +8,7 @@
     />
     <link rel="stylesheet" href="Styles/homepage-header.css" />
     <link rel="stylesheet" href="Styles/title-elements.css" />
+    <link rel="stylesheet" href="Styles/kategorie.css" />
   </head>
   <body>
     <div class="header">
@@ -57,5 +58,18 @@
         Schreibe deinen ersten eigenen Blog Post
       </button>
     </div>
+    <h3>Die neusten Artikel</h3>
+    <h4>Wähle eine Kategorie</h4>
+    <div class="grid-4">
+      <div class="header-categorie">
+        <select id="category-select">
+          <option value="all"></option>
+          <option value="ki">KI - Künstliche Intelligenz</option>
+          <option value="electromobility">Elektromobilität</option>
+          <option value="smartphones">Smartphones</option>
+        </select>
+      </div>
+    </div>
+    <script src="JavaScript/kategorie.js"></script>
   </body>
 </html>
