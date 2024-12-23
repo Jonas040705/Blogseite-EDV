@@ -1,0 +1,92 @@
+.articles {
+  display: grid;
+  grid-row: 5;
+  grid-template-rows: auto; /* Jede Zeile passt sich automatisch der Höhe an */
+  gap: 40px; /* Abstand zwischen den Artikeln */
+  margin-top: 20px; /*Abstand zwischen dem Kategorie Dropdown und den Blog Posts*/ 
+  padding: 50px;
+  
+}
+.article {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* Bild links, Text rechts */
+  gap: 15px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Sanfte Übergänge */
+  position: relative;
+}
+
+.article:hover {
+  cursor: pointer;
+  transform: scale(1.03); /* Vergrößert den Blogpost leicht */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Verstärkt den Schatteneffekt */
+}
+
+.article img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.article .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.article h2 {
+  margin: 0;
+  font-size: 35px;
+}
+
+.article p {
+  margin: 20px 0;
+  font-size: 0.9em;
+  color: #000000;
+  font-size: 18px;
+}
+
+.article .author {
+  color: #676767;
+  margin-top: 30px;
+}
+.article .category {
+  font-size: 13px;
+  color: #585CDB;
+  text-align: center;
+}
+.article .category {
+  margin-top: 15px;
+  background-color: #D5D5ED;
+  border-radius: 10px;
+  padding: 9px 6px;
+  display: inline-block;
+  max-width: 150px;
+}
+.icons-container {
+  position: absolute;
+  bottom: 15px; /* Abstand vom unteren Rand des Artikels */
+  right: 15px; /* Abstand vom rechten Rand des Artikels */
+}
+.icons-container img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icons-container img:hover {
+  transform: scale(1.2); /* Icons vergrößern beim Hover */
+}
+/* Daumen hoch grün einfärben */
+.like-icon.active {
+  filter: brightness(0) saturate(100%) invert(41%) sepia(88%) saturate(386%) hue-rotate(86deg) brightness(88%) contrast(94%);
+  transform: scale(1.2); /* Vergrößerung bei Aktivierung */
+}
+
+/* Daumen runter rot einfärben */
+.dislike-icon.active {
+  filter: brightness(0) saturate(100%) invert(19%) sepia(93%) saturate(747%) hue-rotate(341deg) brightness(91%) contrast(91%);
+  transform: scale(1.2); /* Vergrößerung bei Aktivierung */
+}
