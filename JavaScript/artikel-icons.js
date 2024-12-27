@@ -1,21 +1,31 @@
-// Wähle die Daumen-hoch- und Daumen-runter-Icons
-const likeIcon = document.querySelector('.like-icon');
-const dislikeIcon = document.querySelector('.dislike-icon');
+// Wähle die relevanten Icons (Daumen hoch und Daumen runter)
+const likeIcons = document.querySelectorAll('.like-icon');
+const dislikeIcons = document.querySelectorAll('.dislike-icon');
 
 // Event Listener für Daumen hoch
-likeIcon.addEventListener('click', function () {
-  // Wenn Daumen hoch aktiv ist, deaktiviere Daumen runter
-  this.classList.toggle('active');
-  if (this.classList.contains('active')) {
-    dislikeIcon.classList.remove('active');
-  }
+likeIcons.forEach((likeIcon) => {
+    likeIcon.addEventListener('click', function () {
+        this.classList.toggle('active');
+
+        // Entferne die aktive Klasse von dem entsprechenden Daumen-runter-Icon im gleichen Container
+        const parent = this.closest('.icons-container');
+        const siblingDislike = parent.querySelector('.dislike-icon');
+        if (this.classList.contains('active')) {
+            siblingDislike.classList.remove('active');
+        }
+    });
 });
 
 // Event Listener für Daumen runter
-dislikeIcon.addEventListener('click', function () {
-  // Wenn Daumen runter aktiv ist, deaktiviere Daumen hoch
-  this.classList.toggle('active');
-  if (this.classList.contains('active')) {
-    likeIcon.classList.remove('active');
-  }
+dislikeIcons.forEach((dislikeIcon) => {
+    dislikeIcon.addEventListener('click', function () {
+        this.classList.toggle('active');
+
+        // Entferne die aktive Klasse von dem entsprechenden Daumen-hoch-Icon im gleichen Container
+        const parent = this.closest('.icons-container');
+        const siblingLike = parent.querySelector('.like-icon');
+        if (this.classList.contains('active')) {
+            siblingLike.classList.remove('active');
+        }
+    });
 });

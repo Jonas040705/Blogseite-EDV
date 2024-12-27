@@ -72,7 +72,7 @@
       </div>
     </div>
     <div class="articles">
-      <div class="article">
+      <div class="article" onclick="navigateToArticle(event)">
         <img src="icons/Ki_Bild.jpg" alt="Künstliche Intelligenz" />
         <div class="content">
           <h2>Künstliche Intelligenz: Neue Horizonte durch KI-Startups</h2>
@@ -89,14 +89,24 @@
             src="icons/like.svg"
             alt="Daumen hoch"
             class="thumb-icon like-icon"
+            onclick="likePost(event)"
           />
           <img
             src="icons/dislike.svg"
             alt="Daumen runter"
             class="thumb-icon dislike-icon"
+            onclick="dislikePost(event)"
           />
-          <img src="icons/commentar.svg" alt="Kommentar" />
-          <img src="icons/share.svg" alt="Teilen" />
+          <a href="Artikel-anzeigen.html#comments-section">
+            <img
+              src="icons/commentar.svg"
+              alt="Kommentare anzeigen"
+              class="comment-icon"
+            />
+          </a>
+          <a href="#" onclick="copyToClipboard()">
+            <img src="icons/share.svg" alt="Teilen" class="share-icon" />
+          </a>
         </div>
       </div>
       <div class="article">
@@ -115,8 +125,16 @@
           <span class="category">Elektromobilität</span>
         </div>
         <div class="icons-container">
-          <img src="icons/like.svg" alt="Daumen hoch" />
-          <img src="icons/dislike.svg" alt="Daumen runter" />
+          <img
+            src="icons/like.svg"
+            alt="Daumen hoch"
+            class="thumb-icon like-icon"
+          />
+          <img
+            src="icons/dislike.svg"
+            alt="Daumen runter"
+            class="thumb-icon dislike-icon"
+          />
           <img src="icons/commentar.svg" alt="Kommentar" />
           <img src="icons/share.svg" alt="Teilen" />
         </div>
@@ -135,8 +153,16 @@
           <span class="category">Smartphones</span>
         </div>
         <div class="icons-container">
-          <img src="icons/like.svg" alt="Daumen hoch" />
-          <img src="icons/dislike.svg" alt="Daumen runter" />
+          <img
+            src="icons/like.svg"
+            alt="Daumen hoch"
+            class="thumb-icon like-icon"
+          />
+          <img
+            src="icons/dislike.svg"
+            alt="Daumen runter"
+            class="thumb-icon dislike-icon"
+          />
           <img src="icons/commentar.svg" alt="Kommentar" />
           <img src="icons/share.svg" alt="Teilen" />
         </div>
@@ -144,5 +170,6 @@
     </div>
     <script src="JavaScript/kategorie.js"></script>
     <script src="JavaScript/artikel-icons.js"></script>
+    <script src="JavaScript/share-icon.js"></script>
   </body>
 </html>

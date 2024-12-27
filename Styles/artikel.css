@@ -80,13 +80,23 @@
   transform: scale(1.2); /* Icons vergrößern beim Hover */
 }
 /* Daumen hoch grün einfärben */
-.like-icon.active {
+.icons-container .like-icon.active {
   filter: brightness(0) saturate(100%) invert(41%) sepia(88%) saturate(386%) hue-rotate(86deg) brightness(88%) contrast(94%);
-  transform: scale(1.2); /* Vergrößerung bei Aktivierung */
+  transform: scale(1.4); /* Vergrößerung bei Aktivierung */
 }
 
 /* Daumen runter rot einfärben */
-.dislike-icon.active {
+.icons-container .dislike-icon.active {
   filter: brightness(0) saturate(100%) invert(19%) sepia(93%) saturate(747%) hue-rotate(341deg) brightness(91%) contrast(91%);
-  transform: scale(1.2); /* Vergrößerung bei Aktivierung */
+  transform: scale(1.4); /* Vergrößerung bei Aktivierung */
+}
+.comment-icon img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  text-decoration: none;
+}
+.icons-container a {
+  color: #f9f9f9;
 }

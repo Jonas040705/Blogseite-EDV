@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog Post</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Styles/Artikel-anzeigen.css" />
+    <link rel="stylesheet" href="Styles/kommentar-section.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="left-section">
+        <a href="Homepage.html" class="logo-link">
+          <div class="logo">
+            <div class="logo-background">
+              <span class="logo-letter">Blog</span>
+            </div>
+            <span class="logo-text">s</span>
+          </div>
+        </a>
+      </div>
+      <div class="middle-section">
+        <a href="Unterseiten/blog-schreiben.html">Blog schreiben</a>
+        <a href="Unterseiten/Profil.html">Profil</a>
+        <a href="Unterseiten/ueber-uns.html">Über uns</a>
+      </div>
+      <div class="right-section">
+        <a href="registration.html" class="sign-login-button">Sign/Login</a>
+      </div>
+    </div>
+    <div class="article">
+      <img src="icons/KI_Bild.jpg" alt="Künstliche Intelligenz" />
+      <div class="content">
+        <h2>Künstliche Intelligenz: Neue Horizonte durch KI-Startups</h2>
+        <div class="article-text">
+          <p>
+            Ein klarer Fokus liegt weiterhin auf Künstlicher Intelligenz (KI).
+            Unternehmen wie OpenAI, Anthropic und Google DeepMind treiben die
+            Entwicklung neuer KI-Modelle voran. Chatbots, Bildgeneratoren und
+            Automatisierungstools werden immer leistungsstärker – und
+            zugänglicher für die breite Masse.
+          </p>
+
+          <p>
+            Generative KI revolutioniert derzeit viele Industrien. In der
+            Softwareentwicklung helfen KI-Tools wie GitHub Copilot und Replit
+            dabei, Code zu schreiben, Fehler zu identifizieren und komplexe
+            Anwendungen effizienter zu entwickeln. Dies reduziert nicht nur
+            Entwicklungszeiten, sondern erleichtert auch Einsteigern das
+            Programmieren.
+          </p>
+
+          <p>
+            Darüber hinaus erleben wir einen Aufschwung an spezialisierten
+            KI-Anwendungen:
+          </p>
+          <ul>
+            <li>
+              Medizinische Diagnosen: KI-Systeme wie DeepMind s AlphaFold
+              verbessern die Vorhersage von Proteinstrukturen, was die
+              Medikamentenentwicklung beschleunigt.
+            </li>
+            <li>
+              Kreative Arbeit: Tools wie Runway oder MidJourney ermöglichen es
+              Künstlern und Designern, Bilder und Videos mithilfe von KI zu
+              generieren.
+            </li>
+            <li>
+              Automatisierung im Alltag: KI-Assistenten werden nicht nur
+              smarter, sondern auch allgegenwärtiger – von Sprachassistenten bis
+              zu smarten Haushaltsgeräten.
+            </li>
+          </ul>
+
+          <p>
+            Ein besonderes Augenmerk liegt aktuell auf ethischen
+            Fragestellungen. Fragen rund um Transparenz, Datenschutz und
+            Jobverluste durch Automatisierung werden intensiv diskutiert.
+            Startups und Tech-Giganten suchen gleichermaßen nach Wegen, KI
+            nachhaltig und verantwortungsvoll einzusetzen.
+          </p>
+        </div>
+      </div>
+      <div class="author-info">
+        <div class="author-avatar">JK</div>
+        <div class="author-details">
+          <span class="author-name">Jonas Köder</span>
+          <span class="publish-date">14. Dezember 2024</span>
+        </div>
+      </div>
+    </div>
+    <div id="comments-section" class="comments-section">
+      <h3>Kommentare (Anzahl der Kommentare)</h3>
+      <div class="comment-form">
+        <h4>Kommentar schreiben</h4>
+        <label for="name">Dein Name</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="z.B. Max Mustermann"
+          class="name-input"
+        />
+
+        <label for="comment">Dein Kommentar</label>
+        <div class="textarea-container">
+          <textarea
+            id="comment"
+            placeholder="Schreibe einen Kommentar..."
+            minlength="60"
+            maxlength="5000"
+          ></textarea>
+          <button class="submit-button">
+            <img
+              src="icons/send.svg"
+              alt="Kommentar senden"
+              class="send-icon"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

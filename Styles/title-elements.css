@@ -60,3 +60,6 @@
   margin-left: 150px;
   word-spacing: 3px;
 }
+.blog-button:hover {
+  background-color: #9385da;
+}

@@ -1,0 +1,192 @@
+body {
+  background-color: #F6F7FF;
+  font-family: Roboto, Arial;
+  min-height: 200vh;
+  display: grid;
+}
+.header {
+  grid-row: 1; /* Header oben */
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #e4e7ff;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(83, 83, 83);
+}
+.left-section {
+  display: flex;
+  align-items: center;
+}
+.logo-link {
+  text-decoration: none;
+}
+.logo {
+  display: flex; /* Horizontale Anordnung von Logo-Hintergrund und Text */
+  align-items: center; /* Vertikale Zentrierung */
+  font-family: Roboto, Arial;/*Schriftart für alles auf der Seite*/
+  margin-left: 35px; /*Abstand zur linken Rand */
+  transition: all 0.3s ease; /* Sanfter Übergang */
+}
+.logo:hover {
+  background-color: #939DEC; /* Blau beim Hover */
+  border-radius: 20px; /* Runde Ecken */
+}
+.logo-background {
+  background-color: #4aaeff; /* Blau (angepasst nach deinem Screenshot) */
+  color: #000000; /* Schwarzer Text */
+  border-radius: 20px; /* Runde Form */
+  width: 100px; /* Breite des Kreises */
+  height: 53px; /* Höhe des Kreises */
+  display: flex; /* Zentriert den Buchstaben im Kreis */
+  justify-content: center; /* Horizontale Zentrierung */
+  align-items: center; /* Vertikale Zentrierung */
+  font-size: 40px; /* Größe des Buchstabens */
+  font-weight: bold; /* Fettschrift */
+  margin-right: 3px; /* Abstand zwischen Kreis und Text */
+  transition: all 0.3s ease; /* Sanfter Übergang */
+}
+/* Text rechts neben dem Kreis */
+.logo-text {
+  font-size: 40px; /* Schriftgröße des Textes */
+  color: #000; /* Schwarzer Text */
+  font-weight: bold; /* Fettschrift */
+  margin-right: 0px; /* Abstand rechts auf 0 beim Hover */
+  transition: all 0.3s ease;
+}
+.logo:hover .logo-background,
+.logo:hover .logo-text {
+  margin-right: 10px; /* Anpassung des Abstands für Text beim Hover */
+  background-color: #939DEC ;
+  padding: 1px 1px 1px 2px; /* Größeres Rechteck, Abstand rechts */
+}
+.middle-section {
+  flex: 1;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 30px;
+}
+.middle-section a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.1s ease;
+}
+.middle-section a:hover {
+  color: #939DEC;
+  font-size: 19px;
+}
+.right-section {
+  display: flex;
+  align-items: center;
+  margin-right: 35px;
+}
+.sign-login-button {
+  display: inline-block; /* Ermöglicht Breite und Höhe */
+  background-color: #4aaeff; /* Blaue Hintergrundfarbe */
+  color: #000; /* Schwarze Schrift */
+  text-decoration: none; /* Entfernt die Unterstreichung */
+  font-size: 18px; /* Schriftgröße */
+  font-weight: bold; /* Fettschrift */
+  border-radius: 20px; /* Runde Ecken */
+  padding: 10px 20px; /* Innenabstand */
+  text-align: center; /* Zentrierung des Textes */
+  transition: all 0.2s ease;
+}
+.sign-login-button:hover {
+  background-color: #939DEC ; /*Farbeänderung beim hovern*/
+  cursor: pointer; /* Zeiger als Cursor */
+  font-size: 19px;
+}
+/* Grid für den Artikel */
+.article {
+  display: grid;
+  grid-template-rows: auto auto; /* Erst das Bild, dann die Autor-Info */
+  grid-template-columns: 1fr 2fr; /* Eine Spalte */
+  align-items: center; /* Vertikale Ausrichtung in der Mitte */
+  margin: 10px 0; /* Abstand zu anderen Elementen */
+  max-height: 700px;
+  margin-top: -90px;
+  padding: 5px;
+}
+/* Bild im Artikel */
+.article img {
+  max-width: 70%; /* Bild passt sich an den Container an */
+  height: auto; /* Beibehaltung des Seitenverhältnisses */
+  border-radius: 8px; /* Abgerundete Ecken für ein modernes Design */
+  margin-left: 50px;
+}
+
+/* Textinhalt */
+.article .content h2 {
+  margin: 0 0 10px; /* Abstand zwischen Titel und Text */
+  font-size: 50px; /* Schriftgröße des Titels */
+  margin-top: 197px;
+  margin-right: 20px;
+}
+
+.article-text {
+  margin: 0; /* Entfernt Standardabstände */
+  font-size: 19px; /* Schriftgröße des Textes */
+  color: #303030; /* Dezente Textfarbe */
+  margin-right: 20px;
+}
+/* Container für Name und Datum */
+.author-info {
+  display: flex; /* Flexbox für horizontale Anordnung */
+  align-items: center; /* Zentriert Inhalte vertikal */
+  margin-top: -350px; /* Abstand nach oben zum Bild */
+  margin-left: 50px;
+  max-width: 200px;
+}
+
+.author-avatar {
+  width: 50px; /* Größe des Avatars */
+  height: 50px; /* Größe des Avatars */
+  border-radius: 50%; /* Runde Form */
+  background-color: #ccc; /* Hintergrundfarbe des Avatars */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold; /* Fett für die Initialen */
+  font-size: 18px;
+  color: white; /* Textfarbe */
+  margin-right: 10px; /* Abstand zum Namen */
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column; /* Name und Datum untereinander */
+}
+
+.author-name {
+  font-size: 18px; /* Schriftgröße des Namens */
+  font-weight: bold; /* Name fett */
+  color: #333; /* Textfarbe */
+}
+
+.publish-date {
+  font-size: 16px; /* Schriftgröße des Datums */
+  color: #666; /* Dezente Textfarbe */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+
