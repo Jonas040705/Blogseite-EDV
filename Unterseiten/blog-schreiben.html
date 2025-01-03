@@ -1,7 +1,323 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
   <head>
-    Blog schreiben
+    <title>Post Erstellen</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f6f7ff;
+        font-family: Roboto, Arial;
+      }
+      .header {
+        grid-row: 1; /* Header oben */
+        height: 65px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background-color: #e4e7ff;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: rgb(83, 83, 83);
+      }
+      .left-section {
+        display: flex;
+        align-items: center;
+      }
+      .logo-link {
+        text-decoration: none;
+      }
+      .logo {
+        display: flex; /* Horizontale Anordnung von Logo-Hintergrund und Text */
+        align-items: center; /* Vertikale Zentrierung */
+        font-family: Roboto, Arial; /*Schriftart für alles auf der Seite*/
+        margin-left: 35px; /*Abstand zur linken Rand */
+        transition: all 0.3s ease; /* Sanfter Übergang */
+      }
+      .logo:hover {
+        background-color: #939dec; /* Blau beim Hover */
+        border-radius: 20px; /* Runde Ecken */
+      }
+      .logo-background {
+        background-color: #4aaeff; /* Blau (angepasst nach deinem Screenshot) */
+        color: #000000; /* Schwarzer Text */
+        border-radius: 20px; /* Runde Form */
+        width: 100px; /* Breite des Kreises */
+        height: 53px; /* Höhe des Kreises */
+        display: flex; /* Zentriert den Buchstaben im Kreis */
+        justify-content: center; /* Horizontale Zentrierung */
+        align-items: center; /* Vertikale Zentrierung */
+        font-size: 40px; /* Größe des Buchstabens */
+        font-weight: bold; /* Fettschrift */
+        margin-right: 3px; /* Abstand zwischen Kreis und Text */
+        transition: all 0.3s ease; /* Sanfter Übergang */
+      }
+      /* Text rechts neben dem Kreis */
+      .logo-text {
+        font-size: 40px; /* Schriftgröße des Textes */
+        color: #000; /* Schwarzer Text */
+        font-weight: bold; /* Fettschrift */
+        margin-right: 0px; /* Abstand rechts auf 0 beim Hover */
+        transition: all 0.3s ease;
+      }
+      .logo:hover .logo-background,
+      .logo:hover .logo-text {
+        margin-right: 10px; /* Anpassung des Abstands für Text beim Hover */
+        background-color: #939dec;
+        padding: 1px 1px 1px 2px; /* Größeres Rechteck, Abstand rechts */
+      }
+      .middle-section {
+        flex: 1;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-right: 30px;
+      }
+      .middle-section a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+        transition: all 0.1s ease;
+      }
+      .middle-section a:hover {
+        color: #939dec;
+        font-size: 19px;
+      }
+      .middle-section .current {
+        color: #939dec;
+      }
+      .right-section {
+        display: flex;
+        align-items: center;
+        margin-right: 35px;
+      }
+      .sign-login-button {
+        display: inline-block; /* Ermöglicht Breite und Höhe */
+        background-color: #4aaeff; /* Blaue Hintergrundfarbe */
+        color: #000; /* Schwarze Schrift */
+        text-decoration: none; /* Entfernt die Unterstreichung */
+        font-size: 18px; /* Schriftgröße */
+        font-weight: bold; /* Fettschrift */
+        border-radius: 20px; /* Runde Ecken */
+        padding: 10px 20px; /* Innenabstand */
+        text-align: center; /* Zentrierung des Textes */
+        transition: all 0.2s ease;
+      }
+      .sign-login-button:hover {
+        background-color: #939dec; /*Farbeänderung beim hovern*/
+        cursor: pointer; /* Zeiger als Cursor */
+        font-size: 19px;
+      }
+
+      /* Allgemeine Einstellungen */
+      body {
+        font-family: Roberto, Arial;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      main {
+        display: flex;
+        width: 800px;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 80px;
+      }
+
+      /* Linke Sektion */
+      .left {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-right: 50px;
+      }
+
+      .image-placeholder {
+        width: 180px;
+        height: 180px;
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+        font-size: 14px;
+        color: #555;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+      }
+      #removeImageButton {
+        margin-top: 5px;
+        background-color: #e0e0e0;
+        color: rgb(198, 42, 42);
+        border: none;
+        border-radius: 4px;
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      #removeImageButton:hover {
+        background-color: #f4c4c4;
+      }
+
+      /* Rechte Sektion */
+      .right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 200px;
+      }
+
+      .right label {
+        font-size: 16px;
+        color: #333;
+        font-weight: bold;
+        margin-bottom: -13px;
+      }
+
+      .right input,
+      .right textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        background-color: #f5f5f5;
+      }
+
+      .right textarea {
+        resize: none;
+        height: 100px;
+      }
+
+      .category-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .publish-button {
+        background-color: #e1d8f9;
+        color: #5c6be0;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        text-align: center;
+        width: 578px;
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .publish-button:hover {
+        background-color: #d4c9f1;
+      }
+      .icon-button {
+        width: 20px; /* Beispielbreite */
+        height: 20px; /* Beispielhöhe */
+        margin-left: 8px; /* Abstand zum Text */
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="header">
+      <div class="left-section">
+        <a href="/Homepage.html" class="logo-link">
+          <div class="logo">
+            <div class="logo-background">
+              <span class="logo-letter">Blog</span>
+            </div>
+            <span class="logo-text">s</span>
+          </div>
+        </a>
+      </div>
+      <div class="middle-section">
+        <a class="current" href="#" onclick="location.reload();"
+          >Blog schreiben</a
+        >
+        <a href="/Unterseiten/Profil.html">Profil</a>
+        <a href="/Unterseiten/ueber-uns.html">Über uns</a>
+      </div>
+      <div class="right-section">
+        <a href="/registration.html" class="sign-login-button">Sign/Login</a>
+      </div>
+    </div>
+    <main>
+      <!-- Linke Sektion -->
+      <div class="left">
+        <div
+          class="image-placeholder"
+          onclick="document.getElementById('imageUpload').click()"
+        >
+          Bild einfügen
+          <input
+            type="file"
+            id="imageUpload"
+            style="display: none"
+            accept="image/*"
+            onchange="previewImage(event)"
+          />
+        </div>
+        <button id="removeImageButton" onclick="removeImage()">
+          Bild entfernen
+        </button>
+      </div>
+
+      <!-- Rechte Sektion -->
+      <div class="right">
+        <label for="title">Titel</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="Titel"
+          required
+        />
+
+        <label for="category">Kategorien:</label>
+        <div class="category-container">
+          <input type="text" id="category" placeholder="Kategorie" />
+        </div>
+
+        <label for="post-content">Verfasse den Post</label>
+        <textarea
+          id="post-content"
+          placeholder="Verfasse den Post..."
+          required
+        ></textarea>
+
+        <button type="button" class="publish-button" onclick="validateForm()">
+          Veröffentlichen
+          <img
+            src="/icons/upload.svg"
+            alt="Veröffentlichen"
+            class="icon-button"
+          />
+        </button>
+      </div>
+    </main>
+    <script src="/JavaScript/upload-bild.js"></script>
+    <script src="/JavaScript/upload-button.js"></script>
+  </body>
 </html>
